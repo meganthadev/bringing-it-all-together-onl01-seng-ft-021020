@@ -28,4 +28,11 @@ class Dog
      DB[:conn].execute(sql)
     end   
       
+    def self.new_from_db(row)  
+      dog = self.new(row[1], row[2], row[0])
+      dog 
+    end   
+      
+    end   
+      
   end    
